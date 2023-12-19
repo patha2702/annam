@@ -1,0 +1,85 @@
+.footer-section {
+    padding: 0.3em 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 3vh;
+    column-gap: 3vw;
+}
+
+.footer-section p {
+    line-height: 1.5;
+    padding: 1em 0;
+}
+.socials-section{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.about-section {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.company-section {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.contact-section {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+ul {
+    padding: 1em 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 1vh;
+}
+
+
+.title {
+    font-size: 18;
+    font-weight: 600;
+    color: #f54748;
+}
+
+.footer-input-field-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-input-field {
+    padding: 0.6em 1.2em;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #E8E8E8;
+}
+
+.footer-btn{
+    padding: 0.6em 1.2em;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #f54748;
+    color: white
+}
+.footer-btn {
+    padding: 0.4em 0.4em;
+    display: inline-block;
+    width: 40%;
+    background-color: #f54748;
+    color: whitesmoke;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+}
