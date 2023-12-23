@@ -20,9 +20,11 @@
   "homepage": "https://github.com/patha2702/annam#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
+    "@parcel/transformer-raw": "^2.10.3",
     "parcel": "^2.10.3",
     "postcss": "^8.4.32",
     "process": "^0.11.10",

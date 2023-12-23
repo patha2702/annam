@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-60vw {
-    width: 60vw;
+.custom-whitish{
+    background-color: #f9e8de
 }
