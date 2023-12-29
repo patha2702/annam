@@ -1,33 +1,38 @@
 import React from "react";
 import starIcon from "../../assets/images/star-icon.svg";
 
-const Card = () => {
+const Card = ({ dishObj }) => {
   return (
-    <section className="w-5/6 md:w-4/6 lg:w-1/6 lg:flex lg:flex-col lg:items-center rounded-b-lg rounded-t-full p-4 bg-gradient-to-b from-orange-500 via-white to-gray-500">
-      <div className="p-4 lg:p-2 lg:w- bg-white rounded-full">
-        <img
-          src="https://joyfoodsunshine.com/wp-content/uploads/2022/06/chicken-kebabs-recipe-1.jpg"
-          alt="#"
-          className="rounded-full lg:w-full"
-        />
-      </div>
-      <div className="flex flex-col justify-around items-center gap-4 md:gap-6 lg:gap-1 pt-2 md:pt-4 lg:pt-2">
-        <span className="block flex gap-2 md:gap-2 lg:gap-1 text-3xl md:text-5xl lg:text-3xl font-bold">
-          &#36;<span>130</span>
+    <section className="relative w-5/6 h-[60vh] md:w-4/6 lg:w-[20vw] lg:h-[50vh] lg:flex lg:flex-col lg:items-left rounded-lg p-1 hover:border-2 hover:border-gray-500">
+      <img
+        src={dishObj?.image}
+        alt={dishObj?.name}
+        className="w-full h-[60%]"
+      />
+      <section className="flex flex-col justify-start items-left p-1 text-normal border-2 border-gray-400 rounded-lg">
+        <span className="flex justify-between">
+          <span className="font-semibold text-xl">{dishObj?.name}</span>
+          <span className="rounded-lg flex items:center p-1 bg-green-400 ">
+            <span className="font-semibold text-xl">{dishObj?.rating}</span>
+            <span>
+              <img src={starIcon} alt="star icon" />
+            </span>
+          </span>
         </span>
-        <span className="block flex gap-2 items-center text-xl md:text-2xl lg:text-xl font-bold">
-          Rating <img src={starIcon} alt="#" />
-          (4.5)
+        <span >{dishObj.chef}</span>
+        <span className="flex justify-between">
+          <span>{dishObj.category}</span>
+          <span>{dishObj.type}</span>
         </span>
-        <span className="text-xl md:text-3xl lg:text-xl font-bold text-orange-600">Kebab</span>
-        <div className="leading-normal lg:leading-tight text-center md:text-2xl lg:text-sm md:py-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A architecto
-          iste debitis autem dolore numquam!
-        </div>
-        <button className="px-4 md:px-10 lg:px-4 py-2 md:py-4 lg:py-2 rounded-full bg-orange-500 text-xl md:text-2xl lg:text-base font-semibold text-white">Order Now</button>
-      </div>
+        <span className="flex justify-between">
+          <span>&#36;{dishObj.price}</span>
+          <span>{dishObj.delivery_time} min</span>
+        </span>
+      </section>
+      <button className="absolute bottom-4 left-[25%] lg:-bottom-3 px-6 py-3 bg-orange-500 self-center rounded-full text-white font-semibold">Order Now</button>
     </section>
   );
 };
 
 export default Card;
+

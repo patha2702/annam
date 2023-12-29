@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logoIcon from "../../assets/images/logo.png";
 import menuIcon from "../../assets/images/menu.svg";
 import closeIcon from "../../assets/images/close.svg";
@@ -34,22 +35,27 @@ const Header = () => {
             }}
           />
           <ul className="flex flex-col justify-around align-start pt-4 md:pt-8">
-            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4">
-              Today Special Offers
+            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4 cursor-pointer">
+              <Link to="/">Home</Link>
             </li>
-            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4">
-              Why Annam
+            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4 cursor-pointer">
+              <Link to="/offers">Today Special Offers</Link>
             </li>
-            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4">
-              Our Menu
+            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4 cursor-pointer">
+              <Link to="/about">Why Annam</Link>
             </li>
-            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4">
-              Cart
+            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4 cursor-pointer">
+              <Link to="/menu">Our Menu</Link>
+            </li>
+            <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4 cursor-pointer">
+              <Link to="/cart">Cart</Link>
             </li>
             <li className="font-semibold text-lg p-2 md:p-4">
-              <button className="w-full rounded-lg bg-orange-600 py-2 md:py-4 px-4 md:px-8 text-lg md:text-2xl font-semibold">
-                Sign in
-              </button>
+              <Link to="/sign-in">
+                <button className="w-full rounded-lg bg-orange-600 py-2 md:py-4 px-4 md:px-8 text-lg md:text-2xl font-semibold">
+                  Sign in
+                </button>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -69,15 +75,29 @@ const Header = () => {
       </header>
 
       <header className="hidden lg:flex lg:justify-between lg:items-center lg:gap-[5%] lg:bg-gray-200 lg:h-[15vh] lg:py-[4vh] lg:px-[1.5vw]">
-        <img src={logoIcon} />
+        <Link to="/">
+          <img src={logoIcon} />
+        </Link>
         <nav>
           <ul className="flex justify-around items-center gap-[4vw] text-xl">
-            <li>Today Special Offers</li>
-            <li>Why Annam</li>
-            <li>Our Menu</li>
-            <li>Cart</li>
+            <li className="cursor-pointer">
+              <Link to="/offers">Today Special Offers</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="/about">Why Annam</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="/menu">Our Menu</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="/cart">Cart</Link>
+            </li>
             <li>
-              <button className="px-4 py-2 text-lg rounded-full bg-orange-500 text-white font-semibold">Sign in</button>
+              <Link to="/sign-in">
+                <button className="px-4 py-2 text-lg rounded-full bg-orange-500 text-white font-semibold">
+                  Sign in
+                </button>
+              </Link>
             </li>
           </ul>
         </nav>
