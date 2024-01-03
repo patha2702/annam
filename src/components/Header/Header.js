@@ -15,7 +15,7 @@ const Header = () => {
   
   return (
     <div>
-      <header className="lg:hidden flex justify-between align-center px-2 md:px-8 py-3 md:py-10 bg-gray-200">
+      <header className="lg:hidden flex justify-between align-center px-2 md:px-8 py-3 md:py-10 bg-gray-200 border-b-3 border-gray-600 shadow-lg">
         <img
           src={logoIcon}
           alt="Annam logo"
@@ -76,27 +76,27 @@ const Header = () => {
         />
       </header>
 
-      <header className="hidden lg:flex lg:justify-between lg:items-center lg:gap-[5%] lg:bg-gray-200 lg:h-[15vh] lg:py-[4vh] lg:px-[1.5vw]">
+      <header className="hidden lg:flex lg:justify-between lg:items-center lg:gap-[5%] lg:bg-gray-200 lg:h-[15vh] lg:py-[4vh] lg:px-[1.5vw] border-b-3 border-gray-600 shadow-lg">
         <Link to="/">
-          <img src={logoIcon} />
+          <img src={logoIcon} className="hover:border-4 hover:border-gray-300 hover:shadow-lg"/>
         </Link>
         <nav>
           <ul className="flex justify-around items-center gap-[4vw] text-xl">
-            <li className="cursor-pointer">
+            <li className="p-1 font-medium cursor-pointer hover:border-4 hover:border-gray-300 hover:shadow-lg">
               <Link to="/offers">Today Special Offers</Link>
             </li>
-            <li className="cursor-pointer">
+            <li className="p-1 font-medium cursor-pointer hover:border-4 hover:border-gray-300 hover:shadow-lg">
               <Link to="/about">Why Annam</Link>
             </li>
-            <li className="cursor-pointer">
+            <li className="p-1 font-medium cursor-pointer hover:border-4 hover:border-gray-300 hover:shadow-lg">
               <Link to="/menu">Our Menu</Link>
             </li>
-            <li className="cursor-pointer">
+            <li className="p-1 font-medium cursor-pointer hover:border-4 hover:border-gray-300 hover:shadow-lg">
               <Link to="/cart">Cart ({cart.length})</Link>
             </li>
             <li>
               <Link to="/sign-in">
-                <button className="px-4 py-2 text-lg rounded-full bg-orange-500 text-white font-semibold">
+                <button className="px-4 py-2 text-lg rounded-full bg-orange-500 text-white font-semibold hover:border-4 hover:border-gray-300 hover:shadow-lg">
                   Sign in
                 </button>
               </Link>
