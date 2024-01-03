@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/patha2702/annam#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.1",
     "use-sound": "^4.0.1"
   },

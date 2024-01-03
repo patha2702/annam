@@ -5,12 +5,14 @@ import menuIcon from "../../assets/images/menu.svg";
 import closeIcon from "../../assets/images/close.svg";
 import revealUrl from "../../assets/audio/reveal.mp3";
 import closeUrl from "../../assets/audio/disappear.mp3";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [menuStatus, setMenuStatus] = useState("hidden");
   const revealMenu = new Audio(revealUrl);
   const closeMenu = new Audio(closeUrl);
-
+  const cart = useSelector((state) => state.cart.items);
+  
   return (
     <div>
       <header className="lg:hidden flex justify-between align-center px-2 md:px-8 py-3 md:py-10 bg-gray-200">
@@ -48,7 +50,7 @@ const Header = () => {
               <Link to="/menu">Our Menu</Link>
             </li>
             <li className="font-semibold text-lg md:text-2xl border-b-2 border-black-500 p-2 md:p-4 cursor-pointer">
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart">Cart ({cart.length})</Link>
             </li>
             <li className="font-semibold text-lg p-2 md:p-4">
               <Link to="/sign-in">
@@ -90,7 +92,7 @@ const Header = () => {
               <Link to="/menu">Our Menu</Link>
             </li>
             <li className="cursor-pointer">
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart">Cart ({cart.length})</Link>
             </li>
             <li>
               <Link to="/sign-in">
