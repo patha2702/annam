@@ -6,7 +6,6 @@ import Footer from "./components/Footer/Footer";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
 import Error from "./pages/Error";
-import Menu from "./pages/Menu";
 import Dish from "./components/Dish";
 import Offers from "./pages/Offers";
 import SignIn from "./pages/SignIn";

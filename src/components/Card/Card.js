@@ -4,11 +4,11 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../../utils/cartSlice";
 
 const Card = ({ dishObj }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const handleAddToCart = () => {
-    dispatch(addItem(dishObj))
-  }
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
   return (
     <section className="relative w-5/6 h-[60vh] md:w-4/6 lg:w-[20vw] lg:h-[50vh] lg:flex lg:flex-col lg:items-left rounded-lg p-1 hover:border-2 hover:border-gray-500">
       <img
@@ -36,7 +36,10 @@ const Card = ({ dishObj }) => {
           <span>{dishObj.delivery_time} min</span>
         </span>
       </section>
-      <button className="absolute bottom-4 left-[25%] lg:-bottom-3 px-6 py-3 bg-orange-500 self-center rounded-full text-white font-semibold" onClick={handleAddToCart}>
+      <button
+        className="absolute bottom-4 left-[25%] lg:-bottom-3 px-6 py-3 bg-orange-500 self-center rounded-full text-white font-semibold"
+        onClick={() => handleAddItem(dishObj) }
+      >
         Add to Cart
       </button>
     </section>
